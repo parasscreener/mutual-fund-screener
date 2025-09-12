@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Mutual Fund Recovery Screener</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .timestamp {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+        .market-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        .metric-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .metric-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #2a5298;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        .funds-table {
+            padding: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        th {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        tr:hover {
+            background: #f8f9fa;
+        }
+        .recommendation {
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+        }
+        .strong-buy { background: #28a745; }
+        .buy { background: #007bff; }
+        .hold { background: #ffc107; color: #333; }
+        .avoid { background: #dc3545; }
+        .beaten-down-high { color: #dc3545; font-weight: bold; }
+        .beaten-down-medium { color: #fd7e14; font-weight: bold; }
+        .beaten-down-low { color: #20c997; font-weight: bold; }
+        .news-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        .news-item {
+            background: white;
+            margin: 15px 0;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 5px solid #2a5298;
+        }
+        .news-headline {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #1e3c72;
+            color: white;
+            font-size: 0.9em;
+        }
+        .disclaimer {
+            margin-top: 10px;
+            font-size: 0.8em;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 Indian Mutual Fund Recovery Screener</h1>
+            <p>Identifying Beaten-Down Funds with Comeback Potential</p>
+            <div class="timestamp">Last Updated: 2025-09-12 11:30:47 IST</div>
+        </div>
+
+        <div class="market-overview">
+            <div class="metric-card">
+                <div class="metric-value">25,125</div>
+                <div class="metric-label">NIFTY 50 Level</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">22.0</div>
+                <div class="metric-label">NIFTY 50 P/E</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">120.0%</div>
+                <div class="metric-label">Market Cap/GDP</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">Overvalued</div>
+                <div class="metric-label">Market Valuation</div>
+            </div>
+        </div>
+
+        <div class="funds-table">
+            <h2>🎯 Top Beaten-Down Funds with Recovery Potential</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fund Name</th>
+                        <th>Category</th>
+                        <th>AUM (₹Cr)</th>
+                        <th>1Y Return</th>
+                        <th>3Y Return</th>
+                        <th>5Y Return</th>
+                        <th>10Y Return</th>
+                        <th>Momentum Score</th>
+                        <th>Beaten Down Level</th>
+                        <th>Recovery Potential</th>
+                        <th>Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>SBI Small Cap Fund</strong><br>
+                            <small>Manager: R Srinivasan</small></td>
+                        <td>Small Cap</td>
+                        <td>₹31,227</td>
+                        <td style="color: red; font-weight: bold;">-8.2%</td>
+                        <td>12.8%</td>
+                        <td>20.1%</td>
+                        <td>18.5%</td>
+                        <td><strong>100/100</strong></td>
+                        <td class="beaten-down-medium">Medium</td>
+                        <td>21.3%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Motilal Oswal Midcap Fund</strong><br>
+                            <small>Manager: Rakesh Singh</small></td>
+                        <td>Mid Cap</td>
+                        <td>₹33,608</td>
+                        <td style="color: red; font-weight: bold;">-9.8%</td>
+                        <td>14.2%</td>
+                        <td>19.8%</td>
+                        <td>17.4%</td>
+                        <td><strong>100/100</strong></td>
+                        <td class="beaten-down-medium">Medium</td>
+                        <td>19.9%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Tata Small Cap Fund</strong><br>
+                            <small>Manager: Meeta Shetty</small></td>
+                        <td>Small Cap</td>
+                        <td>₹12,348</td>
+                        <td style="color: red; font-weight: bold;">-11.5%</td>
+                        <td>9.2%</td>
+                        <td>16.2%</td>
+                        <td>13.8%</td>
+                        <td><strong>100/100</strong></td>
+                        <td class="beaten-down-high">High</td>
+                        <td>21.1%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Axis Small Cap Fund</strong><br>
+                            <small>Manager: Shreyash Devalkar</small></td>
+                        <td>Small Cap</td>
+                        <td>₹25,568</td>
+                        <td style="color: red; font-weight: bold;">-5.8%</td>
+                        <td>16.2%</td>
+                        <td>22.8%</td>
+                        <td>17.9%</td>
+                        <td><strong>90/100</strong></td>
+                        <td class="beaten-down-medium">Medium</td>
+                        <td>30.6%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kotak Small Cap Fund</strong><br>
+                            <small>Manager: Pankaj Tibrewal</small></td>
+                        <td>Small Cap</td>
+                        <td>₹18,456</td>
+                        <td style="color: red; font-weight: bold;">-7.1%</td>
+                        <td>11.8%</td>
+                        <td>17.9%</td>
+                        <td>15.8%</td>
+                        <td><strong>90/100</strong></td>
+                        <td class="beaten-down-medium">Medium</td>
+                        <td>37.6%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>HDFC Mid Cap Opportunities Fund</strong><br>
+                            <small>Manager: Chirag Setalvad</small></td>
+                        <td>Mid Cap</td>
+                        <td>₹83,104</td>
+                        <td style="color: red; font-weight: bold;">-2.5%</td>
+                        <td>15.2%</td>
+                        <td>18.3%</td>
+                        <td>16.8%</td>
+                        <td><strong>80/100</strong></td>
+                        <td class="beaten-down-low">Low</td>
+                        <td>38.3%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Franklin India Smaller Cos Fund</strong><br>
+                            <small>Manager: Anand Radhakrishnan</small></td>
+                        <td>Small Cap</td>
+                        <td>₹8,245</td>
+                        <td style="color: red; font-weight: bold;">-12.3%</td>
+                        <td>8.9%</td>
+                        <td>15.6%</td>
+                        <td>14.2%</td>
+                        <td><strong>80/100</strong></td>
+                        <td class="beaten-down-high">High</td>
+                        <td>21.0%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nippon India Small Cap Fund</strong><br>
+                            <small>Manager: Samir Rachh</small></td>
+                        <td>Small Cap</td>
+                        <td>₹57,009</td>
+                        <td style="color: red; font-weight: bold;">-3.2%</td>
+                        <td>18.5%</td>
+                        <td>24.1%</td>
+                        <td>20.0%</td>
+                        <td><strong>80/100</strong></td>
+                        <td class="beaten-down-low">Low</td>
+                        <td>32.9%</td>
+                        <td><span class="recommendation strong-buy">Strong Buy</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="news-section">
+            <h2>📰 Market News & Scenarios</h2>
+            <div class="news-item">
+                <div class="news-headline">Indian Markets Navigate US Trade Tensions</div>
+                <div>Markets remain resilient despite trade uncertainties. GST reforms expected to boost consumption.</div>
+                <small style="color: #666;">Impact: Mixed | Date: 2025-09-12</small>
+            </div>
+            <div class="news-item">
+                <div class="news-headline">Fed Rate Cut Expected This Month</div>
+                <div>US Fed likely to cut rates by 25bps, potentially boosting FII inflows to India.</div>
+                <small style="color: #666;">Impact: Positive | Date: 2025-09-12</small>
+            </div>
+            <div class="news-item">
+                <div class="news-headline">India GDP Growth Remains Strong at 7.8%</div>
+                <div>Q1 FY26 GDP growth beats estimates, supporting long-term investment thesis.</div>
+                <small style="color: #666;">Impact: Positive | Date: 2025-09-10</small>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Indian Mutual Fund Recovery Screener</strong></p>
+            <p>Veteran Analyst's Algorithm for Identifying Comeback Opportunities</p>
+            <div class="disclaimer">
+                Disclaimer: This is for educational purposes only. Past performance does not guarantee future results. 
+                Please consult with a financial advisor before making investment decisions.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
